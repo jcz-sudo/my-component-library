@@ -1,0 +1,124 @@
+.vjs-tree-brackets {
+  cursor: pointer;
+
+  &:hover {
+    color: #1890ff;
+  }
+}
+.vjs-carets {
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+
+  svg {
+    transition: transform 0.3s;
+  }
+
+  &:hover {
+    color: #1890ff;
+  }
+}
+
+.vjs-carets-close {
+  transform: rotate(-90deg);
+}
+.vjs-tree {
+  font-family: "微软雅黑";
+  font-size: 14px;
+  text-align: left;
+
+  &.is-virtual {
+    overflow: auto;
+
+    .vjs-tree-node {
+      white-space: nowrap;
+    }
+  }
+}
+
+// 定义混合宏 gen-value-style
+@mixin gen-value-style($color) {
+  color: $color;
+}
+
+.vjs-tree-node {
+  display: flex;
+  position: relative;
+  line-height: 24px;
+
+  &.has-carets {
+    padding-left: 15px;
+  }
+
+  &.has-selector,
+  &.has-carets.has-selector {
+    padding-left: 30px;
+  }
+
+  &.is-highlight,
+  // &:hover {
+  //   background-color: #e6f7ff;
+  // }
+
+  .vjs-indent {
+    display: flex;
+    position: relative;
+  }
+
+  .vjs-indent-unit {
+    width: 1em;
+
+    &.has-line {
+      border-left: 1px dashed #bfcbd9;
+    }
+  }
+
+  &.dark {
+    &.is-highlight,
+    &:hover {
+      background-color: #2e4558;
+    }
+  }
+  .vjs-key {
+    white-space: nowrap;
+  }
+}
+
+.vjs-node-index {
+  position: absolute;
+  right: 100%;
+  margin-right: 4px;
+  user-select: none;
+}
+
+.vjs-colon {
+  white-space: pre;
+}
+
+.vjs-comment {
+  color: #bfcbd9;
+}
+
+.vjs-value {
+  word-break: break-word;
+}
+
+.vjs-value-null {
+  @include gen-value-style(#d55fde);
+}
+
+.vjs-value-undefined {
+  @include gen-value-style(#d55fde);
+}
+
+.vjs-value-number {
+  @include gen-value-style(#1890ff);
+}
+
+.vjs-value-boolean {
+  @include gen-value-style(#1890ff);
+}
+
+.vjs-value-string {
+  @include gen-value-style(#13ce66);
+}

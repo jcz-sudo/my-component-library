@@ -1,0 +1,41 @@
+{
+  "name": "json-format-tree",
+  "version": "0.0.0-beta1",
+  "description": "json格式化高亮组件",
+  "type": "module",
+  "main": "dist/main.js",
+  "module": "dist/main.js",
+  "files": [
+    "/dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/jcz-sudo/mcl-test.git"
+  },
+  "keywords": [
+    "vue",
+    "jsonformat",
+    "jsonTree",
+    "hightlight"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vitejs/plugin-vue-jsx": "^4.1.1",
+    "@vue/tsconfig": "^0.7.0",
+    "less": "^4.2.2",
+    "sass-embedded": "^1.83.4",
+    "ts-loader": "^9.5.2",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.5",
+    "vue-tsc": "^2.2.0"
+  }
+}
