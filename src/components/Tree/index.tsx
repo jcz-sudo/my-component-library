@@ -10,7 +10,6 @@ import {
 } from 'vue';
 import TreeNode, { treeNodePropsPass, NodeDataType } from '../TreeNode/index';
 import { jsonFlatten, JSONDataType, cloneDeep } from '../utils';
-// import './styles.scss';
 export default defineComponent({ 
   name: 'Tree',
 

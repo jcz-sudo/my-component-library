@@ -1,6 +1,6 @@
 {
   "name": "json-format-tree",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "json格式化组件,配合json-source-map实现高亮效果",
   "type": "module",
   "main": "dist/main.js",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/jcz-sudo/mcl-test.git"
+    "url": "https://github.com/jcz-sudo/my-component-library.git"
   },
   "keywords": [
     "vue",

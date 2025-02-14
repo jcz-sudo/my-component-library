@@ -23,7 +23,7 @@
   transform: rotate(-90deg);
 }
 .vjs-tree {
-  font-family: "微软雅黑";
+  font-family: '微软雅黑';
   font-size: 14px;
   text-align: left;
 
@@ -79,9 +79,9 @@
       background-color: #2e4558;
     }
   }
-  .vjs-key {
-    white-space: nowrap;
-  }
+  // .vjs-key {
+  //   white-space: nowrap;
+  // }
 }
 
 .vjs-node-index {
