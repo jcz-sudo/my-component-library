@@ -1,6 +1,6 @@
 {
   "name": "json-format-tree",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "description": "json格式化组件,配合json-source-map实现高亮效果",
   "type": "module",
   "main": "dist/main.js",

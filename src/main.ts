@@ -1,5 +1,6 @@
 import type {App as app} from "vue"
 import JsonTree from './components/Tree';
+import "@/assets/jsonFormat.scss"
 
 
 export {

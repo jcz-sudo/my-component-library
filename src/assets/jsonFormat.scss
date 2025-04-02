@@ -79,9 +79,10 @@
       background-color: #2e4558;
     }
   }
-  // .vjs-key {
-  //   white-space: nowrap;
-  // }
+  .vjs-key {
+    white-space: nowrap;
+    float: left;
+  }
 }
 
 .vjs-node-index {
