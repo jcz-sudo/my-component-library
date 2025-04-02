@@ -90,7 +90,7 @@ export default defineComponent({
     'update:data',
   ],
 
-  setup(props, { emit, slots }) {
+  setup(props, { emit, slots,expose }) {
     const treeRef = ref<HTMLElement>();
 
     const originFlatData = computed(() => jsonFlatten(props.data, props.rootPath));
@@ -263,7 +263,11 @@ export default defineComponent({
         if (val) state.hiddenPaths = initHiddenPaths(props.deep, val);
       },
     );
-
+    const contentPointMap = {} as any
+    const getContentPoint = ()=>{
+      return contentPointMap
+    }
+    expose({getContentPoint})
     return () => {
       const renderNodeKey = props.renderNodeKey ?? slots.renderNodeKey;
       const renderNodeValue = props.renderNodeValue ?? slots.renderNodeValue;
@@ -271,6 +275,10 @@ export default defineComponent({
       const nodeContent =
         state.visibleData &&
         state.visibleData.map((item) => {
+          const curPoint = pointers[item.path]
+          if(curPoint){
+            contentPointMap[JSON.stringify(curPoint)] = item.content
+          }
           return <TreeNode
             key={item.id}
             node={item}
